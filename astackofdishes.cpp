@@ -41,6 +41,7 @@ public:
         }
         else {
             cerr << "I think it might be full..";
+            exit(EXIT_FAILURE);
         }
     }
     Dish pop() {
@@ -51,6 +52,7 @@ public:
         }
         else {
             cerr << "Hmm.. that's not quite right..";
+            exit(EXIT_FAILURE);
         }
     }
     Dish peek() {
@@ -59,6 +61,7 @@ public:
         }
         else {
             cerr << "Hmm.. that's not quite right..";
+            exit(EXIT_FAILURE);
         }
     }
     int size() {
@@ -72,7 +75,7 @@ int main() {
     Dish red_dish("A dish with a red fish pattern on it");
     Dish blue_dish("A dish with a blue fish pattern on it");
     cout << "The current stack size is: " << stack.size() << endl;
-    stack.pop();
+    // stack.pop();
     stack.push(one_dish);
     stack.push(two_dish);
     stack.push(red_dish);
